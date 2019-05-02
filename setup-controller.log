@@ -1,0 +1,2571 @@
++ dirname /local/repository/setup-controller.sh
++ DIRNAME=/local/repository
++ [ -ne 0 ]
+/local/repository/setup-controller.sh: 12: [: -ne: unexpected operator
++ . /local/repository/setup-lib.sh
++ dirname /local/repository/setup-controller.sh
++ DIRNAME=/local/repository
++ OURDIR=/root/setup
++ SETTINGS=/root/setup/settings
++ LOCALSETTINGS=/root/setup/settings.local
++ TOPOMAP=/root/setup/topomap
++ BOOTDIR=/var/emulab/boot
++ TMCC=/usr/local/etc/emulab/tmcc
++ TIMELOGFILE=/root/setup/setup-time.log
++ FIRSTTIME=0
++ [ ! -f /root/setup/setup-lib-first ]
++ [ 0 -ne 0 ]
++ mkdir -p /root/setup
++ touch /root/setup/settings
++ touch /root/setup/settings.local
++ cd /root/setup
++ LOCKFILE=lockfile-create --retry 65535 
++ RMLOCKFILE=lockfile-remove 
++ PSWDGEN=openssl rand -hex 10
++ SSH=ssh -o StrictHostKeyChecking=no
++ SCP=scp -p -o StrictHostKeyChecking=no
++ CONTROLLER=ctl
++ NETWORKMANAGER=nm
++ STORAGEHOST=ctl
++ SHAREHOST=ctl
++ OBJECTHOST=ctl
++ COMPUTENODES=
++ BAREMETALNODES=
++ BLOCKNODES=
++ OBJECTNODES=
++ DATALAN=lan-1
++ MGMTLAN=lan-2
++ BLOCKLAN=
++ OBJECTLAN=
++ DATATUNNELS=1
++ DATAFLATLANS=lan-1
++ DATAVLANS=
++ DATAVXLANS=0
++ DATAOTHERLANS=
++ USE_EXISTING_IPS=1
++ DO_APT_INSTALL=1
++ DO_APT_UPGRADE=0
++ DO_APT_DIST_UPGRADE=0
++ DO_APT_UPDATE=1
++ UBUNTUMIRRORHOST=
++ UBUNTUMIRRORPATH=
++ ENABLE_NEW_SERIAL_SUPPORT=0
++ DO_UBUNTU_CLOUDARCHIVE=0
++ DO_UBUNTU_CLOUDARCHIVE_STAGING=0
++ BUILD_AARCH64_FROM_CORE=0
++ DISABLE_SECURITY_GROUPS=0
++ ENABLE_HOST_PASSTHROUGH=0
++ DEFAULT_SECGROUP_ENABLE_SSH_ICMP=1
++ VERBOSE_LOGGING=False
++ DEBUG_LOGGING=False
++ SUPPORT_DYNAMIC_NODES=0
++ KEYSTONEAPIVERSION=
++ TOKENTIMEOUT=14400
++ SESSIONTIMEOUT=14400
++ GLANCE_LV_SIZE=32
++ SWIFT_LV_SIZE=4
++ CEILOMETER_USE_WSGI=0
++ QUOTASOFF=1
++ KEYSTONEUSEMEMCACHE=0
++ KEYSTONEUSEWSGI=
++ COMPUTE_EXTRA_NOVA_DISK_SPACE=1
++ ML2PLUGIN=openvswitch
++ MANILADRIVER=generic
++ EXTRAIMAGEURLS=
++ LINUXBRIDGE_STATIC=0
++ USE_DESIGNATE_AS_RESOLVER=1
++ USE_NEUTRON_LBAAS=1
++ ENABLE_OPENSTACK_SLOTHD=0
++ OSRELEASE=
++ ADMIN_API=adminapi
++ openssl rand -hex 10
++ ADMIN_API_PASS=58397944bfa975e99b09
++ ADMIN=admin
++ ADMIN_PASS=
++ ADMIN_PASS_HASH=
++ cat /var/emulab/boot/swapper
++ SWAPPER=geniuser
++ [ x = x ]
++ UPDATING=0
++ NEWNODELIST=
++ OLDNODELIST=
++ [ ! -e /root/setup/apt-configured ]
++ export DEBIAN_FRONTEND=noninteractive
++ DPKGOPTS=
++ APTGETINSTALLOPTS=-y
++ APTGETINSTALL=apt-get  install -y
++ [ 1 -eq 0 ]
++ grep GENIUSER /root/setup/settings
+GENIUSER=1
++ [ ! 0 -eq 0 ]
++ grep GENIUSER=1 /root/setup/settings
+GENIUSER=1
++ [ 0 -eq 0 ]
++ GENIUSER=1
++ [ 1 -eq 1 ]
++ dpkg -s python-m2crypto
++ [ ! 0 -eq 0 ]
++ [ ! -e /root/setup/geni.key ]
++ HAS_GENI_KEY=1
++ [ ! -e /root/setup/geni.certificate ]
++ HAS_GENI_CERT=1
++ [ ! -e /root/.ssl/encrypted.pem ]
++ [ ! -e /root/setup/manifests.xml -o 0 -ne 0 ]
++ [ ! -e /root/setup/encrypted_admin_pass ]
++ [ ! -e /root/setup/decrypted_admin_pass -a -s /root/setup/encrypted_admin_pass ]
++ [ ! -e /root/setup/parameters ]
++ . /root/setup/parameters
++ CONTROLLER=controller
++ NETWORKMANAGER=controller
++ COMPUTENODES=compute-1 
++ DATALANS=flat-lan-1
++ DATAFLATLANS=flat-lan-1
++ DATAVLANS=
++ DATAVXLANS=0
++ DATATUNNELS=1
++ MGMTLAN=
++ DO_APT_INSTALL=1
++ DO_APT_UPGRADE=0
++ DO_APT_DIST_UPGRADE=0
++ DO_UBUNTU_CLOUDARCHIVE_STAGING=0
++ DO_APT_UPDATE=1
++ ADMIN_PASS_HASH=
++ ENABLE_HOST_PASSTHROUGH=1
++ ENABLE_NEW_SERIAL_SUPPORT=0
++ DISABLE_SECURITY_GROUPS=0
++ DEFAULT_SECGROUP_ENABLE_SSH_ICMP=1
++ USE_NEUTRON_LBAAS=1
++ CEILOMETER_USE_MONGODB=0
++ VERBOSE_LOGGING=False
++ DEBUG_LOGGING=False
++ TOKENTIMEOUT=14400
++ SESSIONTIMEOUT=14400
++ KEYSTONEUSEMEMCACHE=0
++ QUOTASOFF=1
++ ML2PLUGIN=openvswitch
++ USE_DESIGNATE_AS_RESOLVER=1
++ EXTRAIMAGEURLS=
++ OSRELEASE=queens
++ SWIFT_LV_SIZE=4
++ GLANCE_LV_SIZE=32
++ ADMIN_PASS=e986375efd4d
++ ADMIN_PASS_HASH=$1$J.nT52GW$/lCw6xTcZXfYh60xZt6H.1
++ [ x$1$J.nT52GW$/lCw6xTcZXfYh60xZt6H.1 = x ]
++ cat /var/emulab/boot/creator
++ CREATOR=tboudw0
++ cat /var/emulab/boot/swapper
++ SWAPPER=geniuser
++ cat /var/emulab/boot/nickname
++ cut -d . -f 1
++ NODEID=controller
++ cat /var/emulab/boot/nodeid
++ PNODEID=hp094
++ cat /var/emulab/boot/nickname
++ cut -d . -f 2
++ EEID=tboudwin-QV51733
++ cat /var/emulab/boot/nickname
++ cut -d . -f 3
++ EPID=pdc-edu-lab-PG0
++ cat /var/emulab/boot/mydomain
++ OURDOMAIN=utah.cloudlab.us
++ cat /var/emulab/boot/nickname
++ NFQDN=controller.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ cat /var/emulab/boot/nodeid
++ PFQDN=hp094.utah.cloudlab.us
++ cat /var/emulab/boot/myip
++ MYIP=128.110.154.175
++ cat /var/emulab/boot/controlif
++ EXTERNAL_NETWORK_INTERFACE=br-ex
++ cat /var/emulab/boot/nickname
++ cut -f1 -d.
++ HOSTNAME=controller
++ uname -m
++ ARCH=x86_64
++ dpkg-query -S /sbin/init
++ grep -q systemd
++ expr 0 = 0
++ HAVE_SYSTEMD=1
++ OSJUNO=10
++ OSKILO=11
++ OSLIBERTY=12
++ OSMITAKA=13
++ OSNEWTON=14
++ OSOCATA=15
++ OSPIKE=16
++ OSQUEENS=17
++ . /etc/lsb-release
++ DISTRIB_ID=Ubuntu
++ DISTRIB_RELEASE=18.04
++ DISTRIB_CODENAME=bionic
++ DISTRIB_DESCRIPTION=Ubuntu 18.04.1 LTS
++ [ ! xqueens = x ]
++ OSCODENAME=queens
++ [ queens = juno ]
++ [ queens = kilo ]
++ [ queens = liberty ]
++ [ queens = mitaka ]
++ [ queens = newton ]
++ [ queens = ocata ]
++ [ queens = pike ]
++ [ queens = queens ]
++ OSVERSION=17
++ echo Ubuntu 18.04.1 LTS
++ grep -qi LTS
++ [ 0 -eq 0 ]
++ DO_UBUNTU_CLOUDARCHIVE=1
++ echo 18.04
++ cut -d. -f1
++ DISTRIB_MAJOR=18
++ [ 17 -ge 13 ]
++ KEYSTONEUSEMEMCACHE=1
++ [ 17 -eq 10 ]
++ REGION=RegionOne
++ [ 17 -ge 17 ]
++ KADMINPORT=5000
++ [ x = x3 ]
++ [  != 2 -a 17 -ge 12 ]
++ KAPISTR=v3
++ KEYSTONEAPIVERSION=3
++ NAPISTR=v2
++ [ 17 -ge 13 ]
++ NAPISTR=v2.1
++ [ x = x -a 17 -ge 11 ]
++ KEYSTONEUSEWSGI=1
++ [ 17 -ge 13 ]
++ PROJECT_DOMAIN_PARAM=project_domain_name
++ USER_DOMAIN_PARAM=user_domain_name
++ AUTH_TYPE_PARAM=auth_type
++ [ 17 -ge 14 ]
++ DBDPACKAGE=python-pymysql
++ DBDSTRING=mysql+pymysql
++ [ 1 -eq 1 ]
++ geni-get slice_email
++ SWAPPER_EMAIL=tboudwin@wcupa.edu
++ [ 1 -eq 1 ]
++ + cat /root/setup/manifests.0.xml
+perl -e $found = 0; while (<STDIN>) { if ($_ =~ /\<[\d\w:]*routable_pool [^\>\<]*\/>/) { print STDERR "DEBUG: found empty pool: $_\n"; next; } if ($_ =~ /\<[\d\w:]*routable_pool [^\>]*client_id=['"]controller['"]/) { $found = 1; print STDERR "DEBUG: found: $_\n" } if ($found) { while ($_ =~ m/\<emulab:ipv4 address="([\d.]+)\" netmask=\"([\d\.]+)\"/g) { print "$1\n"; } } if ($found && $_ =~ /routable_pool\>/) { print STDERR "DEBUG: end found: $_\n"; $found = 0; } }
++ xargs
+DEBUG: found:   <emulab:routable_pool client_id="controller" count="4" type="any" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm">
+
+DEBUG: end found:   <emulab:ipv4 address="128.110.155.198" netmask="255.255.252.0"/><emulab:ipv4 address="128.110.155.199" netmask="255.255.252.0"/><emulab:ipv4 address="128.110.155.200" netmask="255.255.252.0"/><emulab:ipv4 address="128.110.155.201" netmask="255.255.252.0"/></emulab:routable_pool>
+
++ PUBLICADDRS=128.110.155.198 128.110.155.199 128.110.155.200 128.110.155.201
++ PUBLICCOUNT=0
++ expr 0 + 1
++ PUBLICCOUNT=1
++ expr 1 + 1
++ PUBLICCOUNT=2
++ expr 2 + 1
++ PUBLICCOUNT=3
++ expr 3 + 1
++ PUBLICCOUNT=4
++ [ ! -f /root/setup/topomap -o 0 -ne 0 ]
++ [ ! -z  ]
++ [ ( -s /root/setup/manifests.xml ) -a ( ! ( -s /root/setup/fqdn.map ) ) ]
++ [ ! -s /root/setup/fqdn.map ]
++ cat /root/setup/fqdn.map
++ cut -f1
++ xargs
++ NODES=controller compute-1
++ cat /root/setup/fqdn.map
++ cut -f2
++ xargs
++ FQDNS=controller.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ [ -z compute-1  ]
++ OTHERNODES=
++ [ controller = controller ]
++ continue
++ [ compute-1 = controller ]
++ OTHERNODES= compute-1
++ grep CONTROLLER /root/setup/settings
+CONTROLLER="controller"
++ [ ! 0 = 0 ]
++ [ 0 -ne 0 ]
++ grep MIRRORSETUP /root/setup/settings
+MIRRORSETUP=1
++ [ ! 0 -eq 0 ]
++ [ ! -f /root/setup/apt-updated -a 1 = 1 ]
++ [ ! -f /root/setup/cloudarchive-added -a 1 = 1 ]
++ [ ! -f /root/setup/apt-dist-upgraded -a 0 = 1 ]
++ maybe_install_packages crudini
++ [ ! 0 -eq 0 ]
++ are_packages_installed crudini
++ retval=1
++ [ ! -z crudini ]
++ dpkg -s crudini
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ [ ! -f /root/setup/nextsparesubnet ]
++ cat /root/setup/nextsparesubnet
++ NEXTSPARESUBNET=253
++ [ ! -f /root/setup/mgmt-hosts -o 0 -ne 0 ]
++ [ 1 -gt 0 ]
++ i=0
++ [ 0 -lt 1 ]
++ [ -f /root/setup/ipinfo.tun0 ]
++ expr 0 + 1
++ i=1
++ continue
++ [ 1 -lt 1 ]
++ echo 253
++ echo 253
++ [ 0 -gt 0 ]
++ [ ! -e /root/setup/info.mgmt ]
++ . /root/setup/info.mgmt
++ MGMTIP=192.168.0.1
++ MGMTNETMASK=255.255.0.0
++ MGMTPREFIX=16
++ MGMTVLAN=0
++ MGMTMAC=
++ MGMT_NETWORK_INTERFACE=tun0
++ MGMTVLANDEV=
++ MGMTVLANTAG=
++ [ -e /root/setup/info.flat-lan-1 ]
++ continue
++ [ ! -f /root/setup/neutron.vars ]
++ [ ! -f /etc/emulab/bossnode -a 17 -ge 14 -a 1 = 1 ]
++ [ 0 -ne 0 ]
++ which wget
++ GETTER=/usr/bin/wget
++ [ -n /usr/bin/wget ]
++ GETTEROUT=/usr/bin/wget --remote-encoding=unix -c -O
++ GETTER=/usr/bin/wget --remote-encoding=unix -c -N
++ GETTERLOGARG=-o
++ [ 0 -ne 0 ]
++ [ controller != controller ]
++ logtstart controller
++ area=controller
++ echo controller
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=controller
++ date +%s
++ stamp=1556811262
++ date
++ date=Thu May  2 09:34:22 MDT 2019
++ eval LOGTIMESTART_controller=1556811262
++ LOGTIMESTART_controller=1556811262
++ echo START controller 1556811262 Thu May  2 09:34:22 MDT 2019
++ [ -f /root/setup/settings ]
++ . /root/setup/settings
++ GENIUSER=1
++ CONTROLLER=controller
++ NETWORKMANAGER=controller
++ STORAGEHOST=ctl
++ OBJECTHOST=ctl
++ COMPUTENODES=compute-1 
++ MIRRORSETUP=1
++ maybe_install_packages qemu-utils wget lockfile-progs rpm
++ [ ! 0 -eq 0 ]
++ are_packages_installed qemu-utils wget lockfile-progs rpm
++ retval=1
++ [ ! -z qemu-utils ]
++ dpkg -s qemu-utils
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z wget ]
++ dpkg -s wget
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z lockfile-progs ]
++ dpkg -s lockfile-progs
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z rpm ]
++ dpkg -s rpm
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ [ x86_64 = aarch64 ]
++ maybe_install_packages pssh
++ [ ! 0 -eq 0 ]
++ are_packages_installed pssh
++ retval=1
++ [ ! -z pssh ]
++ dpkg -s pssh
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ PSSH=/usr/bin/parallel-ssh -t 0 -O StrictHostKeyChecking=no 
++ PSCP=/usr/bin/parallel-scp -t 0 -O StrictHostKeyChecking=no 
++ maybe_install_packages dma
++ [ ! 0 -eq 0 ]
++ are_packages_installed dma
++ retval=1
++ [ ! -z dma ]
++ dpkg -s dma
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ maybe_install_packages mailutils
++ [ ! 0 -eq 0 ]
++ are_packages_installed mailutils
++ retval=1
++ [ ! -z mailutils ]
++ dpkg -s mailutils
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ echo hp094.utah.cloudlab.us
++ sleep 2
++ + hostname
++ mail[ -s 17 OpenStack Instance Setting Up -ge tboudwin@wcupa.edu 11
+ ]
++ maybe_install_packages python-openstackclient
++ [ ! 0 -eq 0 ]
++ are_packages_installed python-openstackclient
++ retval=1
++ [ ! -z+  python-openstackclient ]
++ dpkg/local/repository/setup-images.sh -s
+ python-openstackclient
++ echo Your OpenStack instance is setting up on controller.tboudwin-qv51733.pdc-edu-lab-pg0.utah.cloudlab.us .
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ [ 17 -ge 11 -a 17 -lt 14 ]
++ [ -z  ]
++ logtstart database
++ area=database
++ echo database
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=database
++ date +%s
++ stamp=1556811264
++ date
++ date=Thu May  2 09:34:24 MDT 2019
++ eval LOGTIMESTART_database=1556811264
++ LOGTIMESTART_database=1556811264
++ echo START database 1556811264 Thu May  2 09:34:24 MDT 2019
++ maybe_install_packages mariadb-server python-pymysql
++ [ ! 0 -eq 0 ]
++ are_packages_installed mariadb-server python-pymysql
++ retval=1
++ [ ! -z mariadb-server ]
++ dpkg -s mariadb-server
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z python-pymysql ]
++ dpkg -s python-pymysql
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ service_stop mysql
++ service=mysql
++ [ 1 -eq 0 ]
++ systemctl stop mysql
++ sleep 8
++ mysqld_safe --skip-grant-tables --skip-networking
+190502 09:34:28 mysqld_safe Logging to syslog.
+190502 09:34:28 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
++ openssl rand -hex 10
++ DB_ROOT_PASS=7ae6e40a34c0b054bdc9
++ echo use mysql; update user set password=PASSWORD("7ae6e40a34c0b054bdc9") where User='root'; delete from user where User=''; delete from user where User='root' and Host not in ('localhost', '127.0.0.1', '::1'); drop database test; delete from db where Db='test' or Db='test\_%'; flush privileges;
++ mysql -u root
+ERROR 1008 (HY000) at line 1: Can't drop database 'test'; database doesn't exist
++ mysqladmin --password=7ae6e40a34c0b054bdc9 shutdown
++ echo [mysqld]
++ echo bind-address = 192.168.0.1
++ echo default-storage-engine = innodb
++ echo innodb_file_per_table
++ echo collation-server = utf8_general_ci
++ echo init-connect = 'SET NAMES utf8'
++ echo character-set-server = utf8
++ echo max_connections = 4096
++ service_restart mysql
++ service=mysql
++ [ 1 -eq 0 ]
++ systemctl restart mysql
++ service_enable mysql
++ service=mysql
++ [ 1 -eq 0 ]
++ systemctl enable mysql
+mysql.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable mysql
++ echo DB_ROOT_PASS="7ae6e40a34c0b054bdc9"
++ [ -z  -a 17 -ge 12 ]
++ cat
++ chmod 755 /etc/init.d/legacy-openvpn-net-waiter
++ update-rc.d legacy-openvpn-net-waiter defaults
++ update-rc.d legacy-openvpn-net-waiter enable
++ logtend database
++ area=database
++ echo database
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=database
++ date +%s
++ stamp=1556811280
++ date
++ date=Thu May  2 09:34:40 MDT 2019
++ eval tss=$LOGTIMESTART_database
++ tss=1556811264
++ expr 1556811280 - 1556811264
++ tsres=16
++ perl -e print 16 / 60.0 . "\n"
++ resmin=0.266666666666667
++ echo END database 1556811280 Thu May  2 09:34:40 MDT 2019
++ echo TOTAL database 16 0.266666666666667
++ [ -z  ]
++ logtstart rabbit
++ area=rabbit
++ echo rabbit
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=rabbit
++ date +%s
++ stamp=1556811280
++ date
++ date=Thu May  2 09:34:40 MDT 2019
++ eval LOGTIMESTART_rabbit=1556811280
++ LOGTIMESTART_rabbit=1556811280
++ echo START rabbit 1556811280 Thu May  2 09:34:40 MDT 2019
++ maybe_install_packages rabbitmq-server
++ [ ! 0 -eq 0 ]
++ are_packages_installed rabbitmq-server
++ retval=1
++ [ ! -z rabbitmq-server ]
++ dpkg -s rabbitmq-server
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ service_restart rabbitmq-server
++ service=rabbitmq-server
++ [ 1 -eq 0 ]
++ systemctl restart rabbitmq-server
++ service_enable rabbitmq-server
++ service=rabbitmq-server
++ [ 1 -eq 0 ]
++ systemctl enable rabbitmq-server
+Synchronizing state of rabbitmq-server.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable rabbitmq-server
++ rabbitmqctl start_app
+Starting node rabbit@controller
++ [ ! 0 -eq 0 ]
++ [ 17 -lt 14 ]
++ [ queens = juno ]
++ RABBIT_USER=openstack
++ rabbitmqctl add_vhost /
+Creating vhost "/"
+Error: vhost_already_exists: /
++ openssl rand -hex 10
++ RABBIT_PASS=c3a2010afe1a44d76391
++ RABBIT_URL=rabbit://openstack:c3a2010afe1a44d76391@controller
++ rabbitmqctl change_password openstack c3a2010afe1a44d76391
+Changing password for user "openstack"
+Error: no_such_user: openstack
++ [ ! 70 -eq 0 ]
++ rabbitmqctl add_user openstack c3a2010afe1a44d76391
+Creating user "openstack"
++ rabbitmqctl set_permissions openstack .* .* .*
+Setting permissions for user "openstack" in vhost "/"
++ echo RABBIT_USER="openstack"
++ echo RABBIT_PASS="c3a2010afe1a44d76391"
++ echo RABBIT_URL="rabbit://openstack:c3a2010afe1a44d76391@controller"
++ rabbitmqctl stop_app
+Stopping rabbit application on node rabbit@controller
++ service_restart rabbitmq-server
++ service=rabbitmq-server
++ [ 1 -eq 0 ]
++ systemctl restart rabbitmq-server
++ rabbitmqctl start_app
+Starting node rabbit@controller
++ [ ! 0 -eq 0 ]
++ [ -z  -a 17 -ge 12 ]
++ cat
++ systemctl enable openvpn-net-waiter.service
+Created symlink /etc/systemd/system/multi-user.target.wants/openvpn-net-waiter.service → /etc/systemd/system/openvpn-net-waiter.service.
++ logtend rabbit
++ area=rabbit
++ echo rabbit
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=rabbit
++ date +%s
++ stamp=1556811290
++ date
++ date=Thu May  2 09:34:50 MDT 2019
++ eval tss=$LOGTIMESTART_rabbit
++ tss=1556811280
++ expr 1556811290 - 1556811280
++ tsres=10
++ perl -e print 10 / 60.0 . "\n"
++ resmin=0.166666666666667
++ echo END rabbit 1556811290 Thu May  2 09:34:50 MDT 2019
++ echo TOTAL rabbit 10 0.166666666666667
++ DOMARG=
++ [ x3 = x3 ]
++ DOMARG=--domain default
++ [ -z  ]
++ logtstart memcache
++ area=memcache
++ echo memcache
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=memcache
++ date +%s
++ stamp=1556811290
++ date
++ date=Thu May  2 09:34:50 MDT 2019
++ eval LOGTIMESTART_memcache=1556811290
++ LOGTIMESTART_memcache=1556811290
++ echo START memcache 1556811290 Thu May  2 09:34:50 MDT 2019
++ maybe_install_packages memcached python-memcache
++ [ ! 0 -eq 0 ]
++ are_packages_installed memcached python-memcache
++ retval=1
++ [ ! -z memcached ]
++ dpkg -s memcached
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z python-memcache ]
++ dpkg -s python-memcache
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ cat
++ [ 1 -eq 1 ]
++ mkdir /etc/systemd/system/memcached.service.d
++ systemctl list-units
++ grep -q networking.service
++ [ 1 -eq 0 ]
++ systemctl list-units
++ grep -q network-online.target
++ [ 0 -eq 0 ]
++ cat
++ service_restart memcached
++ service=memcached
++ [ 1 -eq 0 ]
++ systemctl restart memcached
++ service_enable memcached
++ service=memcached
++ [ 1 -eq 0 ]
++ systemctl enable memcached
+Synchronizing state of memcached.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable memcached
++ echo MEMCACHE_DONE=1
++ logtend memcache
++ area=memcache
++ echo memcache
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=memcache
++ date +%s
++ stamp=1556811291
++ date
++ date=Thu May  2 09:34:51 MDT 2019
++ eval tss=$LOGTIMESTART_memcache
++ tss=1556811290
++ expr 1556811291 - 1556811290
++ tsres=1
++ perl -e print 1 / 60.0 . "\n"
++ resmin=0.0166666666666667
++ echo END memcache 1556811291 Thu May  2 09:34:51 MDT 2019
++ echo TOTAL memcache 1 0.0166666666666667
++ [ ! x86_64 -eq aarch64 -a 17 -ge 17 -a -z  ]
+/local/repository/setup-controller.sh: 323: [: Illegal number: x86_64
++ [ -z  ]
++ logtstart keystone
++ area=keystone
++ echo keystone
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=keystone
++ date +%s
++ stamp=1556811291
++ date
++ date=Thu May  2 09:34:51 MDT 2019
++ eval LOGTIMESTART_keystone=1556811291
++ LOGTIMESTART_keystone=1556811291
++ echo START keystone 1556811291 Thu May  2 09:34:51 MDT 2019
++ openssl rand -hex 10
++ KEYSTONE_DBPASS=abb414d58bdc7fc94de7
++ echo create database keystone
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo grant all privileges on keystone.* to 'keystone'@'localhost' identified by 'abb414d58bdc7fc94de7'
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo grant all privileges on keystone.* to 'keystone'@'%' identified by 'abb414d58bdc7fc94de7'
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ maybe_install_packages keystone python-keystoneclient
++ [ ! 0 -eq 0 ]
++ are_packages_installed keystone python-keystoneclient
++ retval=1
++ [ ! -z keystone ]
++ dpkg -s keystone
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z python-keystoneclient ]
++ dpkg -s python-keystoneclient
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ [ 17 -ge 11 ]
++ maybe_install_packages apache2
++ [ ! 0 -eq 0 ]
++ are_packages_installed apache2
++ retval=1
++ [ ! -z apache2 ]
++ dpkg -s apache2
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ maybe_install_packages libapache2-mod-wsgi
++ [ ! 0 -eq 0 ]
++ are_packages_installed libapache2-mod-wsgi
++ retval=1
++ [ ! -z libapache2-mod-wsgi ]
++ dpkg -s libapache2-mod-wsgi
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ openssl rand -hex 10
++ ADMIN_TOKEN=8f0dc6edfe26087b7cef
++ crudini --set /etc/keystone/keystone.conf DEFAULT admin_token 8f0dc6edfe26087b7cef
++ crudini --set /etc/keystone/keystone.conf database connection mysql+pymysql://keystone:abb414d58bdc7fc94de7@controller/keystone
++ crudini --set /etc/keystone/keystone.conf token expiration 14400
++ [ 17 -le 10 ]
++ [ 17 -le 11 ]
++ [ 17 -le 13 ]
++ crudini --set /etc/keystone/keystone.conf token provider fernet
++ [ 1 -eq 1 ]
++ [ 17 -lt 17 ]
++ crudini --set /etc/keystone/keystone.conf cache backend dogpile.cache.memcached
++ crudini --set /etc/keystone/keystone.conf cache backend_argument url:127.0.0.1:11211
++ crudini --set /etc/keystone/keystone.conf cache enable true
++ crudini --set /etc/keystone/keystone.conf cache enabled true
++ crudini --set /etc/keystone/keystone.conf cache memcache_servers 127.0.0.1:11211
++ crudini --set /etc/keystone/keystone.conf cache memcached_servers 127.0.0.1:11211
++ crudini --set /etc/keystone/keystone.conf memcache servers 127.0.0.1:11211
++ crudini --set /etc/keystone/keystone.conf DEFAULT verbose False
++ crudini --set /etc/keystone/keystone.conf DEFAULT debug False
++ su -s /bin/sh -c /usr/bin/keystone-manage db_sync keystone
++ [ 17 -ge 14 ]
++ keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
++ keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
++ [ 17 -eq 11 -a 1 -eq 1 ]
++ [ 17 -ge 12 -a 1 -eq 1 -a 17 -lt 14 ]
++ [ 17 -le 10 -o 1 -eq 0 ]
++ service_stop keystone
++ service=keystone
++ [ 1 -eq 0 ]
++ systemctl stop keystone
+Failed to stop keystone.service: Unit keystone.service not loaded.
++ service_disable keystone
++ service=keystone
++ [ 1 -eq 0 ]
++ systemctl disable keystone
+Failed to disable unit: Unit file keystone.service does not exist.
++ service_restart apache2
++ service=apache2
++ [ 1 -eq 0 ]
++ systemctl restart apache2
++ service_enable apache2
++ service=apache2
++ [ 1 -eq 0 ]
++ systemctl enable apache2
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
++ rm -f /var/lib/keystone/keystone.db
++ sleep 8
++ crontab -l -u keystone
++ grep -q token_flush
++ echo @hourly /usr/bin/keystone-manage token_flush >/var/log/keystone/keystone-tokenflush.log 2>&1
++ [ 17 -lt 11 ]
++ export OS_TOKEN=8f0dc6edfe26087b7cef
++ export OS_URL=http://controller:5000/v3
++ [ x3 = x3 ]
++ export OS_IDENTITY_API_VERSION=3
++ [ 17 -lt 11 ]
++ __openstack service create --name keystone --description OpenStack Identity identity
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack service create --name keystone --description OpenStack Identity identity
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | OpenStack Identity               |
+| enabled     | True                             |
+| id          | 7c83a82f93a14166b5d85f0e4e37ffd4 |
+| name        | keystone                         |
+| type        | identity                         |
++-------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ [ 3 -lt 3 ]
++ __openstack endpoint create --region RegionOne identity public http://controller:5000/v3
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne identity public http://controller:5000/v3
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | ccdb262f4e9f4926aef0bb68a58a5778 |
+| interface    | public                           |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 7c83a82f93a14166b5d85f0e4e37ffd4 |
+| service_name | keystone                         |
+| service_type | identity                         |
+| url          | http://controller:5000/v3        |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack endpoint create --region RegionOne identity internal http://controller:5000/v3
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne identity internal http://controller:5000/v3
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 5cf2bb31c8c24051932dc44bbb60cbc8 |
+| interface    | internal                         |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 7c83a82f93a14166b5d85f0e4e37ffd4 |
+| service_name | keystone                         |
+| service_type | identity                         |
+| url          | http://controller:5000/v3        |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack endpoint create --region RegionOne identity admin http://controller:5000/v3
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne identity admin http://controller:5000/v3
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 38081f9a75c34fd399726bf05998dbf1 |
+| interface    | admin                            |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 7c83a82f93a14166b5d85f0e4e37ffd4 |
+| service_name | keystone                         |
+| service_type | identity                         |
+| url          | http://controller:5000/v3        |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ [ xe986375efd4d = x ]
++ APSWD=e986375efd4d
++ [ 17 -eq 10 ]
++ [ 17 -ge 13 ]
++ openstack domain create --description Default Domain default
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | Default Domain                   |
+| enabled     | True                             |
+| id          | 5c9633c21e77422a865188c23a817377 |
+| name        | default                          |
+| tags        | []                               |
++-------------+----------------------------------+
++ __openstack project create --domain default --description Admin Project admin
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack project create --domain default --description Admin Project admin
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | Admin Project                    |
+| domain_id   | 5c9633c21e77422a865188c23a817377 |
+| enabled     | True                             |
+| id          | bc540e508f6e4d539c085795a21a1fc9 |
+| is_domain   | False                            |
+| name        | admin                            |
+| parent_id   | 5c9633c21e77422a865188c23a817377 |
+| tags        | []                               |
++-------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack user create --domain default --password e986375efd4d --email tboudwin@wcupa.edu admin
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack user create --domain default --password e986375efd4d --email tboudwin@wcupa.edu admin
++---------------------+----------------------------------+
+| Field               | Value                            |
++---------------------+----------------------------------+
+| domain_id           | 5c9633c21e77422a865188c23a817377 |
+| email               | tboudwin@wcupa.edu               |
+| enabled             | True                             |
+| id                  | d6358c049c3448539aa785c40002eff7 |
+| name                | admin                            |
+| options             | {}                               |
+| password_expires_at | None                             |
++---------------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role create admin
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role create admin
++-----------+----------------------------------+
+| Field     | Value                            |
++-----------+----------------------------------+
+| domain_id | None                             |
+| id        | 0dbbae55c6a443e78c917bb4519c21af |
+| name      | admin                            |
++-----------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role add --project admin --user admin admin
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role add --project admin --user admin admin
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role create user
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role create user
++-----------+----------------------------------+
+| Field     | Value                            |
++-----------+----------------------------------+
+| domain_id | None                             |
+| id        | 13065d45868b4f498cd5b23c81914642 |
+| name      | user                             |
++-----------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role add --project admin --user admin user
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role add --project admin --user admin user
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack project create --domain default --description Service Project service
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack project create --domain default --description Service Project service
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | Service Project                  |
+| domain_id   | 5c9633c21e77422a865188c23a817377 |
+| enabled     | True                             |
+| id          | ee2c78cf3bf241e8ba089a9b5462b3d7 |
+| is_domain   | False                            |
+| name        | service                          |
+| parent_id   | 5c9633c21e77422a865188c23a817377 |
+| tags        | []                               |
++-------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack user create --domain default --password 58397944bfa975e99b09 --email tboudwin@wcupa.edu adminapi
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack user create --domain default --password 58397944bfa975e99b09 --email tboudwin@wcupa.edu adminapi
++---------------------+----------------------------------+
+| Field               | Value                            |
++---------------------+----------------------------------+
+| domain_id           | 5c9633c21e77422a865188c23a817377 |
+| email               | tboudwin@wcupa.edu               |
+| enabled             | True                             |
+| id                  | 448cdced7ea04258bbe2355344a2b2d0 |
+| name                | adminapi                         |
+| options             | {}                               |
+| password_expires_at | None                             |
++---------------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role add --project admin --user adminapi admin
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role add --project admin --user adminapi admin
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role add --project admin --user adminapi user
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role add --project admin --user adminapi user
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ [ xe986375efd4d = x ]
++ [ 17 -lt 11 ]
++ unset OS_TOKEN OS_URL
++ unset OS_IDENTITY_API_VERSION
++ crudini --del /etc/keystone/keystone.conf DEFAULT admin_token
++ echo ADMIN_API="adminapi"
++ echo ADMIN_API_PASS="58397944bfa975e99b09"
++ echo KEYSTONE_DBPASS="abb414d58bdc7fc94de7"
++ logtend keystone
++ area=keystone
++ echo keystone
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=keystone
++ date +%s
++ stamp=1556811322
++ date
++ date=Thu May  2 09:35:22 MDT 2019
++ eval tss=$LOGTIMESTART_keystone
++ tss=1556811291
++ expr 1556811322 - 1556811291
++ tsres=31
++ perl -e print 31 / 60.0 . "\n"
++ resmin=0.516666666666667
++ echo END keystone 1556811322 Thu May  2 09:35:22 MDT 2019
++ echo TOTAL keystone 31 0.516666666666667
++ echo export OS_TENANT_NAME=admin
++ echo export OS_USERNAME=adminapi
++ echo export OS_PASSWORD=58397944bfa975e99b09
++ echo export OS_AUTH_URL=http://controller:5000/v2.0
++ echo OS_TENANT_NAME="admin"
++ echo OS_USERNAME="adminapi"
++ echo OS_PASSWORD="58397944bfa975e99b09"
++ echo OS_AUTH_URL="http://controller:5000/v2.0"
++ [ x3 = x3 ]
++ echo OS_IDENTITY_API_VERSION=3
++ [ x3 = x3 ]
++ [ 17 -lt 13 ]
++ echo export OS_PROJECT_DOMAIN_NAME=default
++ echo export OS_USER_DOMAIN_NAME=default
++ echo export OS_PROJECT_NAME=admin
++ echo export OS_TENANT_NAME=admin
++ echo export OS_USERNAME=adminapi
++ echo export OS_PASSWORD=58397944bfa975e99b09
++ echo export OS_AUTH_URL=http://controller:5000/v3
++ [ x3 = x3 ]
++ echo export OS_IDENTITY_API_VERSION=3
++ [ 17 -ge 14 ]
++ echo export OS_IMAGE_API_VERSION=2
++ [ 17 -ge 17 ]
++ echo export OS_AUTH_TYPE=password
++ [ x3 = x3 ]
++ [ 17 -lt 13 ]
++ echo OS_PROJECT_DOMAIN_NAME="default"
++ echo OS_USER_DOMAIN_NAME="default"
++ echo OS_PROJECT_NAME="admin"
++ echo OS_TENANT_NAME="admin"
++ echo OS_USERNAME="adminapi"
++ echo OS_PASSWORD="58397944bfa975e99b09"
++ echo OS_AUTH_URL="http://controller:5000/v3"
++ [ x3 = x3 ]
++ echo OS_IDENTITY_API_VERSION=3
++ [ 17 -ge 14 ]
++ echo OS_IMAGE_API_VERSION=2
++ [ 17 -ge 17 ]
++ echo OS_AUTH_TYPE='password'
++ [ 17 -eq 10 ]
++ [ x3 = x3 ]
++ [ 17 -lt 13 ]
++ export OS_PROJECT_DOMAIN_NAME=default
++ export OS_USER_DOMAIN_NAME=default
++ export OS_PROJECT_NAME=admin
++ export OS_TENANT_NAME=admin
++ export OS_USERNAME=adminapi
++ export OS_PASSWORD=58397944bfa975e99b09
++ export OS_AUTH_URL=http://controller:5000/v3
++ [ x3 = x3 ]
++ export OS_IDENTITY_API_VERSION=3
++ ln -sf /root/setup/admin-openrc-newcli.sh /root/setup/admin-openrc.sh
++ ln -sf /root/setup/admin-openrc-newcli.py /root/setup/admin-openrc.py
++ [ -z  ]
++ logtstart glance
++ area=glance
++ echo glance
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=glance
++ date +%s
++ stamp=1556811322
++ date
++ date=Thu May  2 09:35:22 MDT 2019
++ eval LOGTIMESTART_glance=1556811322
++ LOGTIMESTART_glance=1556811322
++ echo START glance 1556811322 Thu May  2 09:35:22 MDT 2019
++ openssl rand -hex 10
++ GLANCE_DBPASS=b95988678f31535ee17d
++ openssl rand -hex 10
++ GLANCE_PASS=e06a946effb1bfac9156
++ echo create database glance
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo grant all privileges on glance.* to 'glance'@'localhost' identified by 'b95988678f31535ee17d'
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ + echo grant all privileges on glance.* to 'glance'@'%' identified by 'b95988678f31535ee17d'
+mysql -u root --password=7ae6e40a34c0b054bdc9
++ [ 17 -lt 11 ]
++ __openstack user create --domain default --password e06a946effb1bfac9156 glance
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack user create --domain default --password e06a946effb1bfac9156 glance
++---------------------+----------------------------------+
+| Field               | Value                            |
++---------------------+----------------------------------+
+| domain_id           | 5c9633c21e77422a865188c23a817377 |
+| enabled             | True                             |
+| id                  | a595dcae6a174880a8fd1a3e957c11b4 |
+| name                | glance                           |
+| options             | {}                               |
+| password_expires_at | None                             |
++---------------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role add --user glance --project service admin
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role add --user glance --project service admin
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack service create --name glance --description OpenStack Image Service image
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack service create --name glance --description OpenStack Image Service image
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | OpenStack Image Service          |
+| enabled     | True                             |
+| id          | 8ea0a648a3fc447aa2579dbdd50c3975 |
+| name        | glance                           |
+| type        | image                            |
++-------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ [ 3 -lt 3 ]
++ __openstack endpoint create --region RegionOne image public http://controller:9292
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne image public http://controller:9292
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | b582745d9b1c4eaeaf23113f4cee19b4 |
+| interface    | public                           |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 8ea0a648a3fc447aa2579dbdd50c3975 |
+| service_name | glance                           |
+| service_type | image                            |
+| url          | http://controller:9292           |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack endpoint create --region RegionOne image internal http://controller:9292
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne image internal http://controller:9292
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 5dcb31631d6d4b8ba8d2c148c6cad8c1 |
+| interface    | internal                         |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 8ea0a648a3fc447aa2579dbdd50c3975 |
+| service_name | glance                           |
+| service_type | image                            |
+| url          | http://controller:9292           |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack endpoint create --region RegionOne image admin http://controller:9292
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne image admin http://controller:9292
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 738fc246aa2248efb42171a315e80899 |
+| interface    | admin                            |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 8ea0a648a3fc447aa2579dbdd50c3975 |
+| service_name | glance                           |
+| service_type | image                            |
+| url          | http://controller:9292           |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ maybe_install_packages glance python-glanceclient
++ [ ! 0 -eq 0 ]
++ are_packages_installed glance python-glanceclient
++ retval=1
++ [ ! -z glance ]
++ dpkg -s glance
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z python-glanceclient ]
++ dpkg -s python-glanceclient
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ crudini --set /etc/glance/glance-api.conf database connection mysql+pymysql://glance:b95988678f31535ee17d@controller/glance
++ crudini --set /etc/glance/glance-api.conf DEFAULT auth_strategy keystone
++ crudini --set /etc/glance/glance-api.conf DEFAULT verbose False
++ crudini --set /etc/glance/glance-api.conf DEFAULT debug False
++ crudini --set /etc/glance/glance-api.conf paste_deploy flavor keystone
++ [ 17 -eq 10 ]
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken auth_uri http://controller:5000
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken auth_url http://controller:5000
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken auth_type password
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken project_domain_name default
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken user_domain_name default
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken project_name service
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken username glance
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken password e06a946effb1bfac9156
++ crudini --set /etc/glance/glance-api.conf glance_store default_store file
++ crudini --set /etc/glance/glance-api.conf glance_store filesystem_store_datadir /var/lib/glance/images/
++ [ 17 -ge 14 ]
++ crudini --set /etc/glance/glance-api.conf glance_store stores file,http
++ [ 17 -ge 13 -o 1 -eq 1 ]
++ crudini --set /etc/glance/glance-api.conf keystone_authtoken memcached_servers controller:11211
++ crudini --set /etc/glance/glance-registry.conf database connection mysql+pymysql://glance:b95988678f31535ee17d@controller/glance
++ crudini --set /etc/glance/glance-registry.conf DEFAULT auth_strategy keystone
++ crudini --set /etc/glance/glance-registry.conf DEFAULT verbose False
++ crudini --set /etc/glance/glance-registry.conf DEFAULT debug False
++ crudini --set /etc/glance/glance-registry.conf paste_deploy flavor keystone
++ [ 17 -eq 10 ]
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken auth_uri http://controller:5000
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken auth_url http://controller:5000
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken auth_type password
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken project_domain_name default
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken user_domain_name default
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken project_name service
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken username glance
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken password e06a946effb1bfac9156
++ [ 17 -ge 13 -o 1 -eq 1 ]
++ crudini --set /etc/glance/glance-registry.conf keystone_authtoken memcached_servers controller:11211
++ su -s /bin/sh -c /usr/bin/glance-manage db_sync glance
+/usr/lib/python2.7/dist-packages/oslo_db/sqlalchemy/enginefacade.py:1334: OsloDBDeprecationWarning: EngineFacade is deprecated; please use oslo_db.sqlalchemy.enginefacade
+  expire_on_commit=expire_on_commit, _conf=conf)
+2019-05-02 09:35:33.988 11534 INFO alembic.runtime.migration [-] Context impl MySQLImpl.
+2019-05-02 09:35:33.989 11534 INFO alembic.runtime.migration [-] Will assume non-transactional DDL.
+2019-05-02 09:35:34.001 11534 INFO alembic.runtime.migration [-] Context impl MySQLImpl.
+2019-05-02 09:35:34.001 11534 INFO alembic.runtime.migration [-] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> liberty, liberty initial
+INFO  [alembic.runtime.migration] Running upgrade liberty -> mitaka01, add index on created_at and updated_at columns of 'images' table
+INFO  [alembic.runtime.migration] Running upgrade mitaka01 -> mitaka02, update metadef os_nova_server
+INFO  [alembic.runtime.migration] Running upgrade mitaka02 -> ocata_expand01, add visibility to images
+INFO  [alembic.runtime.migration] Running upgrade ocata_expand01 -> pike_expand01, empty expand for symmetry with pike_contract01
+INFO  [alembic.runtime.migration] Running upgrade pike_expand01 -> queens_expand01
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade mitaka02 -> ocata_contract01, remove is_public from images
+INFO  [alembic.runtime.migration] Running upgrade ocata_contract01 -> pike_contract01, drop glare artifacts tables
+INFO  [alembic.runtime.migration] Running upgrade pike_contract01 -> queens_contract01
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+Upgraded database to: queens_expand01, current revision(s): queens_expand01
+Database migration is up to date. No migration needed.
+Upgraded database to: queens_contract01, current revision(s): queens_contract01
+Database is synced successfully.
++ [ -n 32 -a ! 32 = 0 ]
++ service_stop glance-registry
++ service=glance-registry
++ [ 1 -eq 0 ]
++ systemctl stop glance-registry
++ service_stop glance-api
++ service=glance-api
++ [ 1 -eq 0 ]
++ systemctl stop glance-api
++ /local/repository/setup-extra-space.sh
++ id -u
++ EUID=0
++ [ 0 -ne 0 ]
++ dirname /local/repository/setup-extra-space.sh
++ . /local/repository/setup-lib.sh
++ dirname /local/repository/setup-extra-space.sh
++ DIRNAME=/local/repository
++ OURDIR=/root/setup
++ SETTINGS=/root/setup/settings
++ LOCALSETTINGS=/root/setup/settings.local
++ TOPOMAP=/root/setup/topomap
++ BOOTDIR=/var/emulab/boot
++ TMCC=/usr/local/etc/emulab/tmcc
++ TIMELOGFILE=/root/setup/setup-time.log
++ FIRSTTIME=0
++ [ ! -f /root/setup/setup-lib-first ]
++ [ 0 -ne 0 ]
++ mkdir -p /root/setup
++ touch /root/setup/settings
++ touch /root/setup/settings.local
++ cd /root/setup
++ LOCKFILE=lockfile-create --retry 65535 
++ RMLOCKFILE=lockfile-remove 
++ PSWDGEN=openssl rand -hex 10
++ SSH=ssh -o StrictHostKeyChecking=no
++ SCP=scp -p -o StrictHostKeyChecking=no
++ CONTROLLER=ctl
++ NETWORKMANAGER=nm
++ STORAGEHOST=ctl
++ SHAREHOST=ctl
++ OBJECTHOST=ctl
++ COMPUTENODES=
++ BAREMETALNODES=
++ BLOCKNODES=
++ OBJECTNODES=
++ DATALAN=lan-1
++ MGMTLAN=lan-2
++ BLOCKLAN=
++ OBJECTLAN=
++ DATATUNNELS=1
++ DATAFLATLANS=lan-1
++ DATAVLANS=
++ DATAVXLANS=0
++ DATAOTHERLANS=
++ USE_EXISTING_IPS=1
++ DO_APT_INSTALL=1
++ DO_APT_UPGRADE=0
++ DO_APT_DIST_UPGRADE=0
++ DO_APT_UPDATE=1
++ UBUNTUMIRRORHOST=
++ UBUNTUMIRRORPATH=
++ ENABLE_NEW_SERIAL_SUPPORT=0
++ DO_UBUNTU_CLOUDARCHIVE=0
++ DO_UBUNTU_CLOUDARCHIVE_STAGING=0
++ BUILD_AARCH64_FROM_CORE=0
++ DISABLE_SECURITY_GROUPS=0
++ ENABLE_HOST_PASSTHROUGH=0
++ DEFAULT_SECGROUP_ENABLE_SSH_ICMP=1
++ VERBOSE_LOGGING=False
++ DEBUG_LOGGING=False
++ SUPPORT_DYNAMIC_NODES=0
++ KEYSTONEAPIVERSION=
++ TOKENTIMEOUT=14400
++ SESSIONTIMEOUT=14400
++ GLANCE_LV_SIZE=32
++ SWIFT_LV_SIZE=4
++ CEILOMETER_USE_WSGI=0
++ QUOTASOFF=1
++ KEYSTONEUSEMEMCACHE=0
++ KEYSTONEUSEWSGI=
++ COMPUTE_EXTRA_NOVA_DISK_SPACE=1
++ ML2PLUGIN=openvswitch
++ MANILADRIVER=generic
++ EXTRAIMAGEURLS=
++ LINUXBRIDGE_STATIC=0
++ USE_DESIGNATE_AS_RESOLVER=1
++ USE_NEUTRON_LBAAS=1
++ ENABLE_OPENSTACK_SLOTHD=0
++ OSRELEASE=
++ ADMIN_API=adminapi
++ openssl rand -hex 10
++ ADMIN_API_PASS=77d351f093ec5b8e5f6e
++ ADMIN=admin
++ ADMIN_PASS=
++ ADMIN_PASS_HASH=
++ cat /var/emulab/boot/swapper
++ SWAPPER=geniuser
++ [ x = x ]
++ UPDATING=0
++ NEWNODELIST=
++ OLDNODELIST=
++ [ ! -e /root/setup/apt-configured ]
++ export DEBIAN_FRONTEND=noninteractive
++ DPKGOPTS=
++ APTGETINSTALLOPTS=-y
++ APTGETINSTALL=apt-get  install -y
++ [ 1 -eq 0 ]
++ grep GENIUSER /root/setup/settings
+GENIUSER=1
++ [ ! 0 -eq 0 ]
++ grep GENIUSER=1 /root/setup/settings
+GENIUSER=1
++ [ 0 -eq 0 ]
++ GENIUSER=1
++ [ 1 -eq 1 ]
++ dpkg -s python-m2crypto
++ [ ! 0 -eq 0 ]
++ [ ! -e /root/setup/geni.key ]
++ HAS_GENI_KEY=1
++ [ ! -e /root/setup/geni.certificate ]
++ HAS_GENI_CERT=1
++ [ ! -e /root/.ssl/encrypted.pem ]
++ [ ! -e /root/setup/manifests.xml -o 0 -ne 0 ]
++ [ ! -e /root/setup/encrypted_admin_pass ]
++ [ ! -e /root/setup/decrypted_admin_pass -a -s /root/setup/encrypted_admin_pass ]
++ [ ! -e /root/setup/parameters ]
++ . /root/setup/parameters
++ CONTROLLER=controller
++ NETWORKMANAGER=controller
++ COMPUTENODES=compute-1 
++ DATALANS=flat-lan-1
++ DATAFLATLANS=flat-lan-1
++ DATAVLANS=
++ DATAVXLANS=0
++ DATATUNNELS=1
++ MGMTLAN=
++ DO_APT_INSTALL=1
++ DO_APT_UPGRADE=0
++ DO_APT_DIST_UPGRADE=0
++ DO_UBUNTU_CLOUDARCHIVE_STAGING=0
++ DO_APT_UPDATE=1
++ ADMIN_PASS_HASH=
++ ENABLE_HOST_PASSTHROUGH=1
++ ENABLE_NEW_SERIAL_SUPPORT=0
++ DISABLE_SECURITY_GROUPS=0
++ DEFAULT_SECGROUP_ENABLE_SSH_ICMP=1
++ USE_NEUTRON_LBAAS=1
++ CEILOMETER_USE_MONGODB=0
++ VERBOSE_LOGGING=False
++ DEBUG_LOGGING=False
++ TOKENTIMEOUT=14400
++ SESSIONTIMEOUT=14400
++ KEYSTONEUSEMEMCACHE=0
++ QUOTASOFF=1
++ ML2PLUGIN=openvswitch
++ USE_DESIGNATE_AS_RESOLVER=1
++ EXTRAIMAGEURLS=
++ OSRELEASE=queens
++ SWIFT_LV_SIZE=4
++ GLANCE_LV_SIZE=32
++ ADMIN_PASS=e986375efd4d
++ ADMIN_PASS_HASH=$1$J.nT52GW$/lCw6xTcZXfYh60xZt6H.1
++ [ x$1$J.nT52GW$/lCw6xTcZXfYh60xZt6H.1 = x ]
++ cat /var/emulab/boot/creator
++ CREATOR=tboudw0
++ cat /var/emulab/boot/swapper
++ SWAPPER=geniuser
++ cat /var/emulab/boot/nickname
++ cut -d . -f 1
++ NODEID=controller
++ cat /var/emulab/boot/nodeid
++ PNODEID=hp094
++ cat /var/emulab/boot/nickname
++ cut -d . -f 2
++ EEID=tboudwin-QV51733
++ cat /var/emulab/boot/nickname
++ cut -d . -f 3
++ EPID=pdc-edu-lab-PG0
++ cat /var/emulab/boot/mydomain
++ OURDOMAIN=utah.cloudlab.us
++ cat /var/emulab/boot/nickname
++ NFQDN=controller.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ cat /var/emulab/boot/nodeid
++ PFQDN=hp094.utah.cloudlab.us
++ cat /var/emulab/boot/myip
++ MYIP=128.110.154.175
++ cat /var/emulab/boot/controlif
++ EXTERNAL_NETWORK_INTERFACE=br-ex
++ cat /var/emulab/boot/nickname
++ cut -f1 -d.
++ HOSTNAME=controller
++ uname -m
++ ARCH=x86_64
++ dpkg-query -S /sbin/init
++ grep -q systemd
++ expr 0 = 0
++ HAVE_SYSTEMD=1
++ OSJUNO=10
++ OSKILO=11
++ OSLIBERTY=12
++ OSMITAKA=13
++ OSNEWTON=14
++ OSOCATA=15
++ OSPIKE=16
++ OSQUEENS=17
++ . /etc/lsb-release
++ DISTRIB_ID=Ubuntu
++ DISTRIB_RELEASE=18.04
++ DISTRIB_CODENAME=bionic
++ DISTRIB_DESCRIPTION=Ubuntu 18.04.1 LTS
++ [ ! xqueens = x ]
++ OSCODENAME=queens
++ [ queens = juno ]
++ [ queens = kilo ]
++ [ queens = liberty ]
++ [ queens = mitaka ]
++ [ queens = newton ]
++ [ queens = ocata ]
++ [ queens = pike ]
++ [ queens = queens ]
++ OSVERSION=17
++ echo Ubuntu 18.04.1 LTS
++ grep -qi LTS
++ [ 0 -eq 0 ]
++ DO_UBUNTU_CLOUDARCHIVE=1
++ echo 18.04
++ cut -d. -f1
++ DISTRIB_MAJOR=18
++ [ 17 -ge 13 ]
++ KEYSTONEUSEMEMCACHE=1
++ [ 17 -eq 10 ]
++ REGION=RegionOne
++ [ 17 -ge 17 ]
++ KADMINPORT=5000
++ [ x = x3 ]
++ [  != 2 -a 17 -ge 12 ]
++ KAPISTR=v3
++ KEYSTONEAPIVERSION=3
++ NAPISTR=v2
++ [ 17 -ge 13 ]
++ NAPISTR=v2.1
++ [ x = x -a 17 -ge 11 ]
++ KEYSTONEUSEWSGI=1
++ [ 17 -ge 13 ]
++ PROJECT_DOMAIN_PARAM=project_domain_name
++ USER_DOMAIN_PARAM=user_domain_name
++ AUTH_TYPE_PARAM=auth_type
++ [ 17 -ge 14 ]
++ DBDPACKAGE=python-pymysql
++ DBDSTRING=mysql+pymysql
++ [ 1 -eq 1 ]
++ geni-get slice_email
++ SWAPPER_EMAIL=tboudwin@wcupa.edu
++ [ 1 -eq 1 ]
++ + cat /root/setup/manifests.0.xml
+perl -e $found = 0; while (<STDIN>) { if ($_ =~ /\<[\d\w:]*routable_pool [^\>\<]*\/>/) { print STDERR "DEBUG: found empty pool: $_\n"; next; } if ($_ =~ /\<[\d\w:]*routable_pool [^\>]*client_id=['"]controller['"]/) { $found = 1; print STDERR "DEBUG: found: $_\n" } if ($found) { while ($_ =~ m/\<emulab:ipv4 address="([\d.]+)\" netmask=\"([\d\.]+)\"/g) { print "$1\n"; } } if ($found && $_ =~ /routable_pool\>/) { print STDERR "DEBUG: end found: $_\n"; $found = 0; } }
++ xargs
+DEBUG: found:   <emulab:routable_pool client_id="controller" count="4" type="any" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm">
+
+DEBUG: end found:   <emulab:ipv4 address="128.110.155.198" netmask="255.255.252.0"/><emulab:ipv4 address="128.110.155.199" netmask="255.255.252.0"/><emulab:ipv4 address="128.110.155.200" netmask="255.255.252.0"/><emulab:ipv4 address="128.110.155.201" netmask="255.255.252.0"/></emulab:routable_pool>
+
++ PUBLICADDRS=128.110.155.198 128.110.155.199 128.110.155.200 128.110.155.201
++ PUBLICCOUNT=0
++ expr 0 + 1
++ PUBLICCOUNT=1
++ expr 1 + 1
++ PUBLICCOUNT=2
++ expr 2 + 1
++ PUBLICCOUNT=3
++ expr 3 + 1
++ PUBLICCOUNT=4
++ [ ! -f /root/setup/topomap -o 0 -ne 0 ]
++ [ ! -z  ]
++ [ ( -s /root/setup/manifests.xml ) -a ( ! ( -s /root/setup/fqdn.map ) ) ]
++ [ ! -s /root/setup/fqdn.map ]
++ cat /root/setup/fqdn.map
++ cut -f1
++ xargs
++ NODES=controller compute-1
++ cat /root/setup/fqdn.map
++ cut -f2
++ xargs
++ FQDNS=controller.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ [ -z compute-1  ]
++ OTHERNODES=
++ [ controller = controller ]
++ continue
++ [ compute-1 = controller ]
++ OTHERNODES= compute-1
++ grep CONTROLLER /root/setup/settings
+CONTROLLER="controller"
++ [ ! 0 = 0 ]
++ [ 0 -ne 0 ]
++ grep MIRRORSETUP /root/setup/settings
+MIRRORSETUP=1
++ [ ! 0 -eq 0 ]
++ [ ! -f /root/setup/apt-updated -a 1 = 1 ]
++ [ ! -f /root/setup/cloudarchive-added -a 1 = 1 ]
++ [ ! -f /root/setup/apt-dist-upgraded -a 0 = 1 ]
++ maybe_install_packages crudini
++ [ ! 0 -eq 0 ]
++ are_packages_installed crudini
++ retval=1
++ [ ! -z crudini ]
++ dpkg -s crudini
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ [ ! -f /root/setup/nextsparesubnet ]
++ cat /root/setup/nextsparesubnet
++ NEXTSPARESUBNET=253
++ [ ! -f /root/setup/mgmt-hosts -o 0 -ne 0 ]
++ [ 1 -gt 0 ]
++ i=0
++ [ 0 -lt 1 ]
++ [ -f /root/setup/ipinfo.tun0 ]
++ expr 0 + 1
++ i=1
++ continue
++ [ 1 -lt 1 ]
++ echo 253
++ echo 253
++ [ 0 -gt 0 ]
++ [ ! -e /root/setup/info.mgmt ]
++ . /root/setup/info.mgmt
++ MGMTIP=192.168.0.1
++ MGMTNETMASK=255.255.0.0
++ MGMTPREFIX=16
++ MGMTVLAN=0
++ MGMTMAC=
++ MGMT_NETWORK_INTERFACE=tun0
++ MGMTVLANDEV=
++ MGMTVLANTAG=
++ [ -e /root/setup/info.flat-lan-1 ]
++ continue
++ [ ! -f /root/setup/neutron.vars ]
++ [ ! -f /etc/emulab/bossnode -a 17 -ge 14 -a 1 = 1 ]
++ [ 0 -ne 0 ]
++ which wget
++ GETTER=/usr/bin/wget
++ [ -n /usr/bin/wget ]
++ GETTEROUT=/usr/bin/wget --remote-encoding=unix -c -O
++ GETTER=/usr/bin/wget --remote-encoding=unix -c -N
++ GETTERLOGARG=-o
++ [ 0 -ne 0 ]
++ [ -f /root/setup/extra-space-done ]
++ logtstart extra-space
++ area=extra-space
++ echo extra-space
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=extra_space
++ date +%s
++ stamp=1556811334
++ date
++ date=Thu May  2 09:35:34 MDT 2019
++ eval LOGTIMESTART_extra_space=1556811334
++ LOGTIMESTART_extra_space=1556811334
++ echo START extra-space 1556811334 Thu May  2 09:35:34 MDT 2019
++ [ -f /root/setup/settings ]
++ . /root/setup/settings
++ GENIUSER=1
++ CONTROLLER=controller
++ NETWORKMANAGER=controller
++ STORAGEHOST=ctl
++ OBJECTHOST=ctl
++ COMPUTENODES=compute-1 
++ MIRRORSETUP=1
++ DB_ROOT_PASS=7ae6e40a34c0b054bdc9
++ RABBIT_USER=openstack
++ RABBIT_PASS=c3a2010afe1a44d76391
++ RABBIT_URL=rabbit://openstack:c3a2010afe1a44d76391@controller
++ MEMCACHE_DONE=1
++ ADMIN_API=adminapi
++ ADMIN_API_PASS=58397944bfa975e99b09
++ KEYSTONE_DBPASS=abb414d58bdc7fc94de7
++ [ -f /root/setup/settings.local ]
++ . /root/setup/settings.local
++ STORAGEDIR=/storage
++ VGNAME=openstack-volumes
++ uname -m
++ ARCH=x86_64
++ maybe_install_packages lvm2
++ [ ! 0 -eq 0 ]
++ are_packages_installed lvm2
++ retval=1
++ [ ! -z lvm2 ]
++ dpkg -s lvm2
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ [ 17 -ge 15 ]
++ maybe_install_packages thin-provisioning-tools
++ [ ! 0 -eq 0 ]
++ are_packages_installed thin-provisioning-tools
++ retval=1
++ [ ! -z thin-provisioning-tools ]
++ dpkg -s thin-provisioning-tools
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ mkdir -p /storage
++ echo STORAGEDIR=/storage
++ vgdisplay emulab
+File descriptor 3 (/local/repository/setup-extra-space.sh) leaked on vgdisplay invocation. Parent PID 11622: /bin/sh
+  Volume group "emulab" not found
+  Cannot process volume group emulab
++ [ 5 -eq 0 ]
++ [ -z  ]
++ LVM=1
++ DONE=0
++ MKEXTRAFS_ARGS=-l -v openstack-volumes -m util -z 1024
++ [ x86_64 = aarch64 -o x86_64 = ppc64le ]
++ lsblk -n -P -b -o NAME,FSTYPE,MOUNTPOINT,PARTTYPE,PARTUUID,TYPE,PKNAME,SIZE
++ perl -e my %devs = (); while (<STDIN>) { $_ =~ s/([A-Z0-9a-z]+=)/;\$$1/g; eval "$_"; if (!($TYPE eq "disk" || $TYPE eq "part")) { next; }; if (exists($devs{$PKNAME})) { delete $devs{$PKNAME}; } if ($FSTYPE eq "" && $MOUNTPOINT eq "" && ($PARTTYPE eq "" || $PARTTYPE eq "0x0") && (int($SIZE) > 3221225472)) { $devs{$NAME} = "/dev/$NAME"; } }; print join(" ",values(%devs))."\n"
++ cat /tmp/devs
++ DEVS=/dev/sda4
++ [ -n /dev/sda4 ]
++ pvcreate /dev/sda4
+File descriptor 3 (/local/repository/setup-extra-space.sh) leaked on pvcreate invocation. Parent PID 11622: /bin/sh
+  Physical volume "/dev/sda4" successfully created.
++ vgcreate openstack-volumes /dev/sda4
+File descriptor 3 (/local/repository/setup-extra-space.sh) leaked on vgcreate invocation. Parent PID 11622: /bin/sh
+  Volume group "openstack-volumes" successfully created
++ [ ! 0 -eq 0 ]
++ DONE=1
++ [ 1 -eq 0 ]
++ vgs -o vg_size --noheadings --units G openstack-volumes
++ sed -ne s/ *\([0-9]*\)[0-9\.]*G/\1/p
+File descriptor 3 (/local/repository/setup-extra-space.sh) leaked on vgs invocation. Parent PID 11711: /bin/sh
++ VGTOTAL=456
++ echo VGNAME=openstack-volumes
++ echo VGTOTAL=456
++ echo LVM=1
++ [ 1 -eq 1 ]
++ expr 456 - 1
++ vgt=455
++ [ controller = ctl ]
++ [ controller = controller ]
++ expr 455 - 32
++ vgt=423
++ [ 423 -lt 20 ]
++ perl -e print 0.75 * 423;
++ CINDER_LV_SIZE=317.25
++ echo SWIFT_LV_SIZE=4
++ echo GLANCE_LV_SIZE=32
++ echo CINDER_LV_SIZE=317.25
++ logtend extra-space
++ area=extra-space
++ echo extra-space
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=extra_space
++ date +%s
++ stamp=1556811334
++ date
++ date=Thu May  2 09:35:34 MDT 2019
++ eval tss=$LOGTIMESTART_extra_space
++ tss=1556811334
++ expr 1556811334 - 1556811334
++ tsres=0
++ perl -e print 0 / 60.0 . "\n"
++ resmin=0
++ echo END extra-space 1556811334 Thu May  2 09:35:34 MDT 2019
++ echo TOTAL extra-space 0 0
++ touch /root/setup/extra-space-done
++ . /root/setup/settings.local
++ STORAGEDIR=/storage
++ VGNAME=openstack-volumes
++ VGTOTAL=456
++ LVM=1
++ SWIFT_LV_SIZE=4
++ GLANCE_LV_SIZE=32
++ CINDER_LV_SIZE=317.25
++ mkdir -p /storage/glance
++ chown glance:glance /storage/glance
++ chmod 770 /storage/glance
++ [ 1 = 1 ]
++ lvcreate -L 32G -n glance openstack-volumes
+  Logical volume "glance" created.
++ [ -f /sbin/mkfs.ext4 ]
++ ftype=ext4
++ mkfs.ext4 /dev/openstack-volumes/glance
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:    4096/83886081052672/83886084198400/83886086819840/8388608               done                            
+Creating filesystem with 8388608 4k blocks and 2097152 inodes
+Filesystem UUID: 453207fa-79bd-4e79-9022-a893b3055e9c
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+	4096000, 7962624
+
+Allocating group tables:   0/256       done                            
+Writing inode tables:   0/256       done                            
+Creating journal (65536 blocks): done
+Writing superblocks and filesystem accounting information:   0/256       done
+
++ echo /dev/openstack-volumes/glance /storage/glance none defaults 0 0
++ mount /dev/openstack-volumes/glance /storage/glance
++ rsync -avz /var/lib/glance/ /storage/glance/
+sending incremental file list
+./
+.gnupg/
+.gnupg/private-keys-v1.d/
+image-cache/
+image-cache/incomplete/
+image-cache/invalid/
+image-cache/queue/
+images/
+
+sent 278 bytes  received 47 bytes  650.00 bytes/sec
+total size is 0  speedup is 0.00
++ rm -rf /var/lib/glance/image-cache /var/lib/glance/images
++ mount -o bind /storage/glance /var/lib/glance
++ echo /storage/glance /var/lib/glance none defaults,bind 0 0
++ service_restart glance-registry
++ service=glance-registry
++ [ 1 -eq 0 ]
++ systemctl restart glance-registry
++ service_enable glance-registry
++ service=glance-registry
++ [ 1 -eq 0 ]
++ systemctl enable glance-registry
+Synchronizing state of glance-registry.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable glance-registry
++ service_restart glance-api
++ service=glance-api
++ [ 1 -eq 0 ]
++ systemctl restart glance-api
++ service_enable glance-api
++ service=glance-api
++ [ 1 -eq 0 ]
++ systemctl enable glance-api
+Synchronizing state of glance-api.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable glance-api
++ rm -f /var/lib/glance/glance.sqlite
++ echo GLANCE_DBPASS="b95988678f31535ee17d"
++ echo GLANCE_PASS="e06a946effb1bfac9156"
++ logtend glance
++ area=glance
++ echo glance
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=glance
++ date +%s
++ stamp=1556811339
++ date
++ date=Thu May  2 09:35:39 MDT 2019
++ eval tss=$LOGTIMESTART_glance
++ tss=1556811322
++ expr 1556811339 - 1556811322
++ tsres=17
++ perl -e print 17 / 60.0 . "\n"
++ resmin=0.283333333333333
++ echo END glance 1556811339 Thu May  2 09:35:39 MDT 2019
++ echo TOTAL glance 17 0.283333333333333
++ [ -z  ]
++ logtstart nova
++ area=nova
++ echo nova
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=nova
++ date +%s
++ stamp=1556811339
++ date
++ date=Thu May  2 09:35:39 MDT 2019
++ eval LOGTIMESTART_nova=1556811339
++ LOGTIMESTART_nova=1556811339
++ echo START nova 1556811339 Thu May  2 09:35:39 MDT 2019
++ openssl rand -hex 10
++ NOVA_DBPASS=6ef525e1dd39cb767bc7
++ openssl rand -hex 10
++ NOVA_PASS=f22e72495b2b002f659b
++ maybe_install_packages nova-api
++ [ ! 0 -eq 0 ]
++ are_packages_installed nova-api
++ retval=1
++ [ ! -z nova-api ]
++ dpkg -s nova-api
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ echo create database nova
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo+  grant all privileges on nova.* to 'nova'@'localhost' identified by '6ef525e1dd39cb767bc7'
+mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo grant all privileges on nova.* to 'nova'@'%' identified by '6ef525e1dd39cb767bc7'
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ [ 17 -ge 13 ]
++ echo create database nova_api
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo+  grant all privileges on nova_api.* to 'nova'@'localhost' identified by '6ef525e1dd39cb767bc7'
+mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo grant all privileges on nova_api.* to 'nova'@'%' identified by '6ef525e1dd39cb767bc7'
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ [ 17 -ge 15 ]
++ echo create database nova_cell0
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo+  grant all privileges on nova_cell0.* to 'nova'@'localhost' identified by '6ef525e1dd39cb767bc7'
+mysql -u root --password=7ae6e40a34c0b054bdc9
++ echo grant all privileges on nova_cell0.* to 'nova'@'%' identified by '6ef525e1dd39cb767bc7'
++ mysql -u root --password=7ae6e40a34c0b054bdc9
++ [ 17 -eq 10 ]
++ __openstack user create --domain default --password f22e72495b2b002f659b nova
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack user create --domain default --password f22e72495b2b002f659b nova
++---------------------+----------------------------------+
+| Field               | Value                            |
++---------------------+----------------------------------+
+| domain_id           | 5c9633c21e77422a865188c23a817377 |
+| enabled             | True                             |
+| id                  | 04f80df70da14dd68934fdb564cad2fc |
+| name                | nova                             |
+| options             | {}                               |
+| password_expires_at | None                             |
++---------------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role add --user nova --project service admin
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role add --user nova --project service admin
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack service create --name nova --description OpenStack Compute Service compute
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack service create --name nova --description OpenStack Compute Service compute
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | OpenStack Compute Service        |
+| enabled     | True                             |
+| id          | 1a5cb7ca3e73433798ee4c5efd2360fc |
+| name        | nova                             |
+| type        | compute                          |
++-------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ [ 3 -lt 3 ]
++ [ 17 -lt 14 ]
++ __openstack endpoint create --region RegionOne compute public http://controller:8774/v2.1
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne compute public http://controller:8774/v2.1
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 05dd6698a3494bd685ecf50f8c69d91e |
+| interface    | public                           |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 1a5cb7ca3e73433798ee4c5efd2360fc |
+| service_name | nova                             |
+| service_type | compute                          |
+| url          | http://controller:8774/v2.1      |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack endpoint create --region RegionOne compute internal http://controller:8774/v2.1
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne compute internal http://controller:8774/v2.1
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 32f18084d95b410a8de5c91b32b94762 |
+| interface    | internal                         |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 1a5cb7ca3e73433798ee4c5efd2360fc |
+| service_name | nova                             |
+| service_type | compute                          |
+| url          | http://controller:8774/v2.1      |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack endpoint create --region RegionOne compute admin http://controller:8774/v2.1
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne compute admin http://controller:8774/v2.1
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | c02afe4a70cd471a9bb9e9e5f68ac87e |
+| interface    | admin                            |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | 1a5cb7ca3e73433798ee4c5efd2360fc |
+| service_name | nova                             |
+| service_type | compute                          |
+| url          | http://controller:8774/v2.1      |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ [ 17 -ge 15 ]
++ openssl rand -hex 10
++ PLACEMENT_PASS=7e21720daf5e86547107
++ __openstack user create --domain default --password 7e21720daf5e86547107 placement
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack user create --domain default --password 7e21720daf5e86547107 placement
++---------------------+----------------------------------+
+| Field               | Value                            |
++---------------------+----------------------------------+
+| domain_id           | 5c9633c21e77422a865188c23a817377 |
+| enabled             | True                             |
+| id                  | fd3efc6e848047fda6d5386b2494a878 |
+| name                | placement                        |
+| options             | {}                               |
+| password_expires_at | None                             |
++---------------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack role add --user placement --project service admin
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack role add --user placement --project service admin
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack service create --name placement --description OpenStack Placement API placement
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack service create --name placement --description OpenStack Placement API placement
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | OpenStack Placement API          |
+| enabled     | True                             |
+| id          | d7e029fb3cb64fc78665206b03f2b155 |
+| name        | placement                        |
+| type        | placement                        |
++-------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ [ 3 -lt 3 ]
++ [ 17 -lt 14 ]
++ __openstack endpoint create --region RegionOne placement public http://controller:8778
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne placement public http://controller:8778
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | 8ea0458ea74d4f1e9c0796792d8b1e9f |
+| interface    | public                           |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | d7e029fb3cb64fc78665206b03f2b155 |
+| service_name | placement                        |
+| service_type | placement                        |
+| url          | http://controller:8778           |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack endpoint create --region RegionOne placement internal http://controller:8778
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne placement internal http://controller:8778
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | f26bf5dffda34d20aa88b7caa7e959a8 |
+| interface    | internal                         |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | d7e029fb3cb64fc78665206b03f2b155 |
+| service_name | placement                        |
+| service_type | placement                        |
+| url          | http://controller:8778           |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ __openstack endpoint create --region RegionOne placement admin http://controller:8778
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack endpoint create --region RegionOne placement admin http://controller:8778
++--------------+----------------------------------+
+| Field        | Value                            |
++--------------+----------------------------------+
+| enabled      | True                             |
+| id           | e061dfeebeaf4e2d996446cceeb352e3 |
+| interface    | admin                            |
+| region       | RegionOne                        |
+| region_id    | RegionOne                        |
+| service_id   | d7e029fb3cb64fc78665206b03f2b155 |
+| service_name | placement                        |
+| service_type | placement                        |
+| url          | http://controller:8778           |
++--------------+----------------------------------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ maybe_install_packages nova-api nova-conductor nova-consoleauth nova-novncproxy nova-scheduler python-novaclient
++ [ ! 0 -eq 0 ]
++ are_packages_installed nova-api nova-conductor nova-consoleauth nova-novncproxy nova-scheduler python-novaclient
++ retval=1
++ [ ! -z nova-api ]
++ dpkg -s nova-api
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z nova-conductor ]
++ dpkg -s nova-conductor
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z nova-consoleauth ]
++ dpkg -s nova-consoleauth
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z nova-novncproxy ]
++ dpkg -s nova-novncproxy
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z nova-scheduler ]
++ dpkg -s nova-scheduler
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z python-novaclient ]
++ dpkg -s python-novaclient
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ [ 17 -lt 17 ]
++ [ 17 -ge 15 ]
++ maybe_install_packages nova-placement-api
++ [ ! 0 -eq 0 ]
++ are_packages_installed nova-placement-api
++ retval=1
++ [ ! -z nova-placement-api ]
++ dpkg -s nova-placement-api
++ [ ! 0 -eq 0 ]
++ shift
++ [ ! -z  ]
++ return 1
++ [ 1 -eq 1 ]
++ return 0
++ [ 0 = 1 ]
++ [ 17 -ge 12 ]
++ crudini --set /etc/nova/nova.conf DEFAULT enabled_apis osapi_compute,metadata
++ crudini --set /etc/nova/nova.conf database connection mysql+pymysql://nova:6ef525e1dd39cb767bc7@controller/nova
++ [ 17 -ge 13 ]
++ crudini --set /etc/nova/nova.conf api_database connection mysql+pymysql://nova:6ef525e1dd39cb767bc7@controller/nova_api
++ crudini --set /etc/nova/nova.conf DEFAULT auth_strategy keystone
++ crudini --set /etc/nova/nova.conf DEFAULT my_ip 192.168.0.1
++ [ 17 -lt 13 ]
++ crudini --set /etc/nova/nova.conf glance api_servers http://controller:9292
++ crudini --set /etc/nova/nova.conf DEFAULT verbose False
++ crudini --set /etc/nova/nova.conf DEFAULT debug False
++ [ 17 -lt 11 ]
++ [ 17 -lt 14 ]
++ crudini --set /etc/nova/nova.conf DEFAULT transport_url rabbit://openstack:c3a2010afe1a44d76391@controller
++ [ 17 -lt 11 ]
++ crudini --set /etc/nova/nova.conf keystone_authtoken auth_uri http://controller:5000
++ crudini --set /etc/nova/nova.conf keystone_authtoken auth_url http://controller:5000
++ crudini --set /etc/nova/nova.conf keystone_authtoken auth_type password
++ crudini --set /etc/nova/nova.conf keystone_authtoken project_domain_name default
++ crudini --set /etc/nova/nova.conf keystone_authtoken user_domain_name default
++ crudini --set /etc/nova/nova.conf keystone_authtoken project_name service
++ crudini --set /etc/nova/nova.conf keystone_authtoken username nova
++ crudini --set /etc/nova/nova.conf keystone_authtoken password f22e72495b2b002f659b
++ [ 17 -ge 13 -o 1 -eq 1 ]
++ crudini --set /etc/nova/nova.conf keystone_authtoken memcached_servers controller:11211
++ [ 17 -ge 13 ]
++ crudini --set /etc/nova/nova.conf DEFAULT use_neutron True
++ crudini --set /etc/nova/nova.conf DEFAULT firewall_driver nova.virt.firewall.NoopFirewallDriver
++ [ 17 -lt 12 ]
++ crudini --set /etc/nova/nova.conf vnc vncserver_listen 192.168.0.1
++ crudini --set /etc/nova/nova.conf vnc vncserver_proxyclient_address 192.168.0.1
++ [ 17 -eq 11 ]
++ [ 17 -ge 12 -a 17 -lt 15 ]
++ [ 17 -ge 15 ]
++ crudini --set /etc/nova/nova.conf filter_scheduler available_filters nova.scheduler.filters.all_filters
++ crudini --set /etc/nova/nova.conf filter_scheduler enabled_filters RetryFilter, AvailabilityZoneFilter, RamFilter, ComputeFilter, ComputeCapabilitiesFilter, ImagePropertiesFilter, ServerGroupAntiAffinityFilter, ServerGroupAffinityFilter
++ [ 17 -ge 11 ]
++ crudini --set /etc/nova/nova.conf oslo_concurrency lock_path /var/lib/nova/tmp
++ [ 0 = 1 ]
++ [ 17 -ge 12 ]
++ cat /proc/cpuinfo
++ grep -i processor.*:
++ wc -l
++ ncpus=20
++ crudini --set /etc/nova/nova.conf api_database max_overflow 20
++ crudini --set /etc/nova/nova.conf api_database max_pool_size 20
++ [ 17 -ge 15 ]
++ crudini --set /etc/nova/nova.conf placement os_region_name RegionOne
++ crudini --set /etc/nova/nova.conf placement auth_url http://controller:5000/v3
++ crudini --set /etc/nova/nova.conf placement auth_type password
++ crudini --set /etc/nova/nova.conf placement project_domain_name default
++ crudini --set /etc/nova/nova.conf placement user_domain_name default
++ crudini --set /etc/nova/nova.conf placement project_name service
++ crudini --set /etc/nova/nova.conf placement username placement
++ crudini --set /etc/nova/nova.conf placement password 7e21720daf5e86547107
++ [ 17 -ge 13 ]
++ su -s /bin/sh -c nova-manage api_db sync nova
++ [ 17 -ge 15 ]
++ su -s /bin/sh -c nova-manage cell_v2 map_cell0 nova
++ su -s /bin/sh -c nova-manage cell_v2 create_cell --name=cell1 --verbose nova
+4397d33d-9990-4a5c-ae69-a2482345b68b
++ su -s /bin/sh -c nova-manage db sync nova
+/usr/lib/python2.7/dist-packages/pymysql/cursors.py:165: Warning: (1831, u'Duplicate index `block_device_mapping_instance_uuid_virtual_name_device_name_idx`. This is deprecated and will be disallowed in a future release.')
+  result = self._query(query)
+/usr/lib/python2.7/dist-packages/pymysql/cursors.py:165: Warning: (1831, u'Duplicate index `uniq_instances0uuid`. This is deprecated and will be disallowed in a future release.')
+  result = self._query(query)
++ [ 17 -eq 16 ]
++ service_restart memcached
++ service=memcached
++ [ 1 -eq 0 ]
++ systemctl restart memcached
++ service_restart nova-api
++ service=nova-api
++ [ 1 -eq 0 ]
++ systemctl restart nova-api
++ service_enable nova-api
++ service=nova-api
++ [ 1 -eq 0 ]
++ systemctl enable nova-api
+Synchronizing state of nova-api.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nova-api
++ [ 17 -lt 17 ]
++ service_restart nova-consoleauth
++ service=nova-consoleauth
++ [ 1 -eq 0 ]
++ systemctl restart nova-consoleauth
++ service_enable nova-consoleauth
++ service=nova-consoleauth
++ [ 1 -eq 0 ]
++ systemctl enable nova-consoleauth
+Synchronizing state of nova-consoleauth.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nova-consoleauth
++ service_restart nova-scheduler
++ service=nova-scheduler
++ [ 1 -eq 0 ]
++ systemctl restart nova-scheduler
++ service_enable nova-scheduler
++ service=nova-scheduler
++ [ 1 -eq 0 ]
++ systemctl enable nova-scheduler
+Synchronizing state of nova-scheduler.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nova-scheduler
++ service_restart nova-conductor
++ service=nova-conductor
++ [ 1 -eq 0 ]
++ systemctl restart nova-conductor
++ service_enable nova-conductor
++ service=nova-conductor
++ [ 1 -eq 0 ]
++ systemctl enable nova-conductor
+Synchronizing state of nova-conductor.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nova-conductor
++ service_restart nova-novncproxy
++ service=nova-novncproxy
++ [ 1 -eq 0 ]
++ systemctl restart nova-novncproxy
++ service_enable nova-novncproxy
++ service=nova-novncproxy
++ [ 1 -eq 0 ]
++ systemctl enable nova-novncproxy
+Synchronizing state of nova-novncproxy.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nova-novncproxy
++ service_restart nova-serialproxy
++ service=nova-serialproxy
++ [ 1 -eq 0 ]
++ systemctl restart nova-serialproxy
+Failed to restart nova-serialproxy.service: Unit nova-serialproxy.service not found.
++ service_enable nova-serialproxy
++ service=nova-serialproxy
++ [ 1 -eq 0 ]
++ systemctl enable nova-serialproxy
+Failed to enable unit: Unit file nova-serialproxy.service does not exist.
++ [ 17 -ge 15 ]
++ a2ensite nova-placement-api.conf
+Site nova-placement-api already enabled
++ service apache2 reload
++ rm -f /var/lib/nova/nova.sqlite
++ /usr/bin/openstack flavor show m1.tiny
+No flavor with a name or ID of 'm1.tiny' exists.
++ [ ! 1 -eq 0 ]
++ __openstack flavor create m1.tiny --id 1 --ram 512 --disk 1 --vcpus 1 --public
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack flavor create m1.tiny --id 1 --ram 512 --disk 1 --vcpus 1 --public
++----------------------------+---------+
+| Field                      | Value   |
++----------------------------+---------+
+| OS-FLV-DISABLED:disabled   | False   |
+| OS-FLV-EXT-DATA:ephemeral  | 0       |
+| disk                       | 1       |
+| id                         | 1       |
+| name                       | m1.tiny |
+| os-flavor-access:is_public | True    |
+| properties                 |         |
+| ram                        | 512     |
+| rxtx_factor                | 1.0     |
+| swap                       |         |
+| vcpus                      | 1       |
++----------------------------+---------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ /usr/bin/openstack flavor show m1.small
+No flavor with a name or ID of 'm1.small' exists.
++ [ ! 1 -eq 0 ]
++ __openstack flavor create m1.small --id 2 --ram 2048 --disk 20 --vcpus 1 --public
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack flavor create m1.small --id 2 --ram 2048 --disk 20 --vcpus 1 --public
++----------------------------+----------+
+| Field                      | Value    |
++----------------------------+----------+
+| OS-FLV-DISABLED:disabled   | False    |
+| OS-FLV-EXT-DATA:ephemeral  | 0        |
+| disk                       | 20       |
+| id                         | 2        |
+| name                       | m1.small |
+| os-flavor-access:is_public | True     |
+| properties                 |          |
+| ram                        | 2048     |
+| rxtx_factor                | 1.0      |
+| swap                       |          |
+| vcpus                      | 1        |
++----------------------------+----------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ /usr/bin/openstack flavor show m1.medium
+No flavor with a name or ID of 'm1.medium' exists.
++ [ ! 1 -eq 0 ]
++ __openstack flavor create m1.medium --id 3 --ram 4096 --disk 40 --vcpus 2 --public
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack flavor create m1.medium --id 3 --ram 4096 --disk 40 --vcpus 2 --public
++----------------------------+-----------+
+| Field                      | Value     |
++----------------------------+-----------+
+| OS-FLV-DISABLED:disabled   | False     |
+| OS-FLV-EXT-DATA:ephemeral  | 0         |
+| disk                       | 40        |
+| id                         | 3         |
+| name                       | m1.medium |
+| os-flavor-access:is_public | True      |
+| properties                 |           |
+| ram                        | 4096      |
+| rxtx_factor                | 1.0       |
+| swap                       |           |
+| vcpus                      | 2         |
++----------------------------+-----------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ /usr/bin/openstack flavor show m1.large
+No flavor with a name or ID of 'm1.large' exists.
++ [ ! 1 -eq 0 ]
++ __openstack flavor create m1.large --id 4 --ram 8192 --disk 80 --vcpus 4 --public
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack flavor create m1.large --id 4 --ram 8192 --disk 80 --vcpus 4 --public
++----------------------------+----------+
+| Field                      | Value    |
++----------------------------+----------+
+| OS-FLV-DISABLED:disabled   | False    |
+| OS-FLV-EXT-DATA:ephemeral  | 0        |
+| disk                       | 80       |
+| id                         | 4        |
+| name                       | m1.large |
+| os-flavor-access:is_public | True     |
+| properties                 |          |
+| ram                        | 8192     |
+| rxtx_factor                | 1.0      |
+| swap                       |          |
+| vcpus                      | 4        |
++----------------------------+----------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ /usr/bin/openstack flavor show m1.xlarge
+No flavor with a name or ID of 'm1.xlarge' exists.
++ [ ! 1 -eq 0 ]
++ __openstack flavor create m1.xlarge --id 5 --ram 16384 --disk 160 --vcpus 8 --public
++ __err=1
++ __debug=
++ __times=0
++ [ 0 -lt 16 -a ! 1 -eq 0 ]
++ openstack flavor create m1.xlarge --id 5 --ram 16384 --disk 160 --vcpus 8 --public
++----------------------------+-----------+
+| Field                      | Value     |
++----------------------------+-----------+
+| OS-FLV-DISABLED:disabled   | False     |
+| OS-FLV-EXT-DATA:ephemeral  | 0         |
+| disk                       | 160       |
+| id                         | 5         |
+| name                       | m1.xlarge |
+| os-flavor-access:is_public | True      |
+| properties                 |           |
+| ram                        | 16384     |
+| rxtx_factor                | 1.0       |
+| swap                       |           |
+| vcpus                      | 8         |
++----------------------------+-----------+
++ __err=0
++ [ 0 -eq 0 ]
++ break
++ [ x86_64 = ppc64le ]
++ echo NOVA_DBPASS="6ef525e1dd39cb767bc7"
++ echo NOVA_PASS="f22e72495b2b002f659b"
++ echo PLACEMENT_PASS="7e21720daf5e86547107"
++ logtend nova
++ area=nova
++ echo nova
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=nova
++ date +%s
++ stamp=1556811401
++ date
++ date=Thu May  2 09:36:41 MDT 2019
++ eval tss=$LOGTIMESTART_nova
++ tss=1556811339
++ expr 1556811401 - 1556811339
++ tsres=62
++ perl -e print 62 / 60.0 . "\n"
++ resmin=1.03333333333333
++ echo END nova 1556811401 Thu May  2 09:36:41 MDT 2019
++ echo TOTAL nova 62 1.03333333333333
++ PHOSTS=
++ mkdir -p /root/setup/pssh.setup-compute.stdout /root/setup/pssh.setup-compute.stderr
++ [ -z  ]
++ logtstart nova-computenodes
++ area=nova-computenodes
++ echo nova-computenodes
++ sed -e s/[^a-zA-Z_0-9]/_/g
++ varea=nova_computenodes
++ date +%s
++ stamp=1556811401
++ date
++ date=Thu May  2 09:36:41 MDT 2019
++ eval LOGTIMESTART_nova_computenodes=1556811401
++ LOGTIMESTART_nova_computenodes=1556811401
++ echo START nova-computenodes 1556811401 Thu May  2 09:36:41 MDT 2019
++ NOVA_COMPUTENODES_DONE=1
++ getfqdn compute-1
++ n=compute-1
++ cat /root/setup/fqdn.map
++ grep -E compute-1\s
++ cut -f2
++ fqdn=compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ echo compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ fqdn=compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ scp -o StrictHostKeyChecking=no /root/setup/settings admin-openrc.sh compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us:/root/setup
++ PHOSTS= -H compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ echo *** Setting up Cmopute service on nodes:  -H compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
+*** Setting up Cmopute service on nodes:  -H compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us
++ /usr/bin/parallel-ssh -t 0 -O StrictHostKeyChecking=no -H compute-1.tboudwin-QV51733.pdc-edu-lab-PG0.utah.cloudlab.us -o /root/setup/pssh.setup-compute.stdout -e /root/setup/pssh.setup-compute.stderr /local/repository/setup-compute.sh
